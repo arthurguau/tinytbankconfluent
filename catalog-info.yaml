@@ -1,0 +1,13 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resources
+metadata:
+  annotations:
+    github.com/project-slug: backstage/backstage
+  name: customer-event-topic
+  description: A sample kafkaesque topic catalogued in Backstage.
+  tags:
+    - eventTopic
+spec:
+  type: Kafka-topic
+  lifecycle: production
+  owner: platform

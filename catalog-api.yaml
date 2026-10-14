@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: user-events-api
+  description: AsyncAPI specification for user Kafka events using Avro schemas
+  namespace: default
+spec:
+  type: asyncapi
+  lifecycle: production
+  owner: user-platform-team
+  definition:
+    $text: ./apio/asyncapi.json

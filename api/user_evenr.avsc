@@ -1,0 +1,53 @@
+{
+  "type": "record",
+  "name": "UserEvent",
+  "namespace": "com.example.events",
+  "doc": "A schema representing a user activity log event.",
+  "fields": [
+    {
+      "name": "eventId",
+      "type": "string",
+      "doc": "Unique identifier for the event."
+    },
+    {
+      "name": "userId",
+      "type": "int",
+      "doc": "The internal database ID of the user."
+    },
+    {
+      "name": "email",
+      "type": "string"
+    },
+    {
+      "name": "signupTimestamp",
+      "type": {
+        "type": "long",
+        "logicalType": "timestamp-millis"
+      },
+      "doc": "Epoch milliseconds timestamp of the event."
+    },
+    {
+      "name": "status",
+      "type": {
+        "type": "enum",
+        "name": "UserStatus",
+        "symbols": ["ACTIVE", "INACTIVE", "PENDING", "BANNED"]
+      },
+      "default": "PENDING"
+    },
+    {
+      "name": "phoneNumber",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "An optional phone number field using a Union type."
+    },
+    {
+      "name": "roles",
+      "type": {
+        "type": "array",
+        "items": "string"
+      },
+      "default": []
+    }
+  ]
+}
