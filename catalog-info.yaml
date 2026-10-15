@@ -4,11 +4,11 @@ metadata:
   annotations:
     github.com/project-slug: backstage/backstage
   name: customer-event-topic
-  namespace: platform
+  namespace: default
   description: A sample kafkaesque topic catalogued in Backstage.
   tags:
     - event-topic
 spec:
   type: Kafka-topic
   lifecycle: production
-  owner: platform-team
+  owner: user:guest
