@@ -4,6 +4,7 @@ metadata:
   annotations:
     github.com/project-slug: backstage/backstage
   name: customer-event-topic
+  namespace: platform
   description: A sample kafkaesque topic catalogued in Backstage.
   tags:
     - event-topic
